@@ -1,6 +1,7 @@
 import React from "react"
 import { navigate } from "gatsby"
 import { handleLogin, isLoggedIn } from "../../services/auth"
+import { LANDING_PAGE } from "../../data/constants"
 
 class Login extends React.Component {
   state = {
@@ -17,26 +18,20 @@ class Login extends React.Component {
   handleSubmit = event => {
     event.preventDefault()
     handleLogin(this.state)
+    navigate(LANDING_PAGE)
   }
 
   render() {
-    console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!")
-    console.log("IS LOGGED IN?", isLoggedIn())
+    console.log(">>> IS LOGGED IN?", isLoggedIn())
 
-    if (isLoggedIn()) {
-      ;`navigate(` / app / profile`)`
-    }
+    // if (isLoggedIn()) {
+    //   navigate(`/app/profile`)
+    // }
 
     return (
       <>
         <h1>Log in</h1>
-        <form
-          method="post"
-          onSubmit={event => {
-            this.handleSubmit(event)
-            navigate(`/app/profile`)
-          }}
-        >
+        <form method="post" onSubmit={event => this.handleSubmit(event)}>
           <label>
             Username
             <input type="text" name="username" onChange={this.handleUpdate} />
