@@ -24,7 +24,7 @@ class Login extends React.Component {
     console.log("IS LOGGED IN?", isLoggedIn())
 
     if (isLoggedIn()) {
-      ;`navigate(` / app / profile`)`
+      navigate(`/app/profile`)
     }
 
     return (
