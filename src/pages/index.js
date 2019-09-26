@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { getUser, isLoggedIn } from "../services/auth"
 
-import Layout from "../components/layout"
+import Layout from "../components/layout/layout"
 
 export default () => (
   <Layout>

@@ -20,11 +20,13 @@ export const handleLogin = ({ username, password }) => {
   return false
 }
 
-export const isLoggedIn = () => {
-  const user = getUser()
+// export const isLoggedIn = () => {
+//   const user = getUser()
 
-  return !!user.username
-}
+//   return !!user.username
+// }
+
+export const isLoggedIn = () => !!getUser().username
 
 export const logout = callback => {
   setUser({})
