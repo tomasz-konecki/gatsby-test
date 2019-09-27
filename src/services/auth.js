@@ -10,11 +10,11 @@ const setUser = user =>
 
 export const handleLogin = ({ username, password }) =>
   // send a request for a token from here
-  username === `john` && password === `pass`
+  username === `tom` && password === `pass`
     ? setUser({
-        username: `john`,
-        name: `Johnny`,
-        email: `johnny@example.org`,
+        username: `tom`,
+        name: `Thomas`,
+        email: `thomas@example.org`,
       })
     : null
 
