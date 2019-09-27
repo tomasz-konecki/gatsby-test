@@ -9,6 +9,7 @@ export default () => {
   } else {
     content.message = "You are not logged in"
   }
+
   return (
     <div
       style={{
@@ -21,6 +22,8 @@ export default () => {
       <span>{content.message}</span>
       <nav>
         <Link to="/">Home</Link>
+        {` `}
+        <Link to="/app/about">About</Link>
         {` `}
         <Link to="/app/profile">Profile</Link>
         {` `}

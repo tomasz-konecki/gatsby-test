@@ -9,6 +9,7 @@ const setUser = user =>
   window.localStorage.setItem("gatsbyUser", JSON.stringify(user))
 
 export const handleLogin = ({ username, password }) =>
+  // send a request for a token from here
   username === `john` && password === `pass`
     ? setUser({
         username: `john`,
@@ -20,7 +21,6 @@ export const handleLogin = ({ username, password }) =>
 export const isLoggedIn = () => !!getUser().username
 
 export const logout = callback => {
-  console.log("LOGOUT CALLBACK", callback)
   setUser({})
   callback()
 }
